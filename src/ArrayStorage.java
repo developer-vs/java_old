@@ -12,8 +12,8 @@ public class ArrayStorage {
 
     Resume get(String uuid) {
         Resume resume = null;
-        for(int i = 0; i < size(); i++) {
-            if(storage[i].toString().equals(uuid)) {
+        for (int i = 0; i < size(); i++) {
+            if (storage[i].toString().equals(uuid)) {
                 resume = storage[i];
                 break;
             }
@@ -23,16 +23,24 @@ public class ArrayStorage {
 
     void delete(String uuid) {
         int curSize = size();
-        for(int i = 0; i < curSize; i++) {
-            if(storage[i].toString().equals(uuid)) {
+        for (int i = 0; i < curSize; i++) {
+            if (storage[i].toString().equals(uuid)) {
                 storage[i] = null;
                 break;
             }
         }
-        for(int i = 0; i < curSize - 1; i++) {
-            Resume temp = storage[i + 1];
-            storage[i + 1] = storage[i];
-            storage[i] = temp;
+
+        for (int i = 0; i < curSize - 1; i++) {
+            boolean isSorted = false;
+            while (!isSorted) {
+                isSorted = true;
+                if (storage[i] == null) {
+                    isSorted = false;
+                    Resume temp = storage[i + 1];
+                    storage[i + 1] = storage[i];
+                    storage[i] = temp;
+                }
+            }
         }
     }
 
