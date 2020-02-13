@@ -31,7 +31,7 @@ public class ArrayStorage {
         }
         Resume[] rightPart = Arrays.copyOfRange(storage, index + 1, size);
         if (rightPart.length != 0) {
-            System.arraycopy(rightPart, 0, storage, index, rightPart.length); // uuid2, uuid3, uuid3
+            System.arraycopy(rightPart, 0, storage, index, rightPart.length);
         }
         storage[size - 1] = null;
         size--;
