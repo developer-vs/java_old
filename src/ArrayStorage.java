@@ -29,7 +29,7 @@ public class ArrayStorage {
                 break;
             }
         }
-        System.arraycopy(storage, index+1, storage, index, storage.length-1-index);
+        System.arraycopy(storage, index+1, storage, index, size-1-index);
         size--;
     }
 
