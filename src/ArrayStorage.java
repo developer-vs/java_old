@@ -4,7 +4,7 @@ import java.util.Arrays;
  * Array based storage for Resumes
  */
 public class ArrayStorage {
-    Resume[] storage = new Resume[3];
+    Resume[] storage = new Resume[10000];
     private int size;
 
     void save(Resume r) {
@@ -29,41 +29,7 @@ public class ArrayStorage {
                 break;
             }
         }
-
-        //  [null, 1, 2]  - 2 length
-//        System.out.println("storage.length: " + storage.length); // 3
-//        System.out.println("storage.length: " + (storage.length-1)); // 2
-//        System.out.println("storage.length: " + (storage.length-1-index)); // 2
-
-        //  [0, null, 2]  - 1 length
-//        System.out.println("storage.length: " + storage.length); // 3
-//        System.out.println("storage.length: " + (storage.length-1)); // 2
-//        System.out.println("storage.length: " + (storage.length-1-index)); // 1
-
-//        [0, 1, null]  - 0 length
-//        System.out.println("storage.length: " + storage.length); // 3
-//        System.out.println("storage.length: " + (storage.length-1)); // 2
-//        System.out.println("storage.length: " + (storage.length-1-index)); // 0
-
-//        System.out.println("storage.length: " + (index+(storage.length-1-index-1))); // 1
-
-        // [null, 1, 2]  - 1
-        // [0, null, 2]  - 2
-        // [0, 1, null]  - 2
-
-//        storage.length - index  - 1
-//                 3         0
-//      (storage.length - storage.length) - (1 + index)
-//             3       -        3         - (1  + 0)
-//             3       -        3         - (1  + 1)
-//             3       -        3         - (0  + 2)
-
-//                       // [0, 1, null]        3 - 1 - 2         +   2
-//                       // [null, 1, 2]        3 - 1 - 0         +   0
-//                                              2 - 1 - 2         +   2
-        System.arraycopy(storage, (storage.length-1-index+1) + index, storage, index, storage.length-1-index);
-        System.out.println(Arrays.toString(storage));
-
+        System.arraycopy(storage, index+1, storage, index, storage.length-1-index);
         size--;
     }
 
