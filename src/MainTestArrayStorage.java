@@ -27,23 +27,23 @@ public class MainTestArrayStorage {
         
         System.out.println("\nDeleting the resume...");
         ARRAY_STORAGE.delete(r1.getUuid());
-        System.out.print("The resume with \"" + r1.getUuid() + "\" has been deleted.");
+        System.out.print("The resume with \"" + r1.getUuid() + "\" has been removed.");
         printAll();
         
         
-        System.out.println("\nTrying to update resume with \"" + r2.getUuid() + "\" to \"uuid22\"...");
+        System.out.println("\nTrying to update resume with \"uuid2\" to \"uuid22\"...");
         r2.setUuid("uuid22");
-        System.out.print("The resume " + ARRAY_STORAGE.update(r2));
+        ARRAY_STORAGE.update(r2);
         printAll();
         
-        System.out.println("\nTrying to update resume with \"" + r3.getUuid() + "\" to \"uuid33\"...");
+        System.out.println("\nTrying to update resume with \"uuid3\" to \"uuid33\"...");
         r3.setUuid("uuid33");
-        System.out.print("The resume " + ARRAY_STORAGE.update(r3));
+        ARRAY_STORAGE.update(r3);
         printAll();
         
-        System.out.println("\nTrying to update resume with \"" + r1.getUuid() + "\" to \"uuid7\"...");
+        System.out.println("\nTrying to update resume with \"\"uuid1\" to \"uuid7\"...");
         r1.setUuid("uuid7");
-        System.out.print("The resume " + ARRAY_STORAGE.update(r1));
+        ARRAY_STORAGE.update(r1);
         printAll();
         
         System.out.print("\nTrying to clear the database...");
