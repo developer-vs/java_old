@@ -21,13 +21,16 @@ public class ArrayStorage {
                 System.out.println("\nThe resume with \"" + resume.getUuid() + "\" already exists in the database.");
             }
         } else {
-            System.out.println("\nThe storage is FULL, the resume with \"" + resume.getUuid() + "\" cannot be saved in the database.");
+            System.out.println("\nThe storage is FULL, the resume with \"" + resume.getUuid()
+                    + "\" cannot be saved in the database.");
         }
     }
 
     public void update(Resume resume) {
-        if (getIndex(resume.getUuid()) != -1) {
-            storage[getIndex(resume.getUuid())] = resume;
+        int index = getIndex(resume.getUuid());
+
+        if (index != -1) {
+            storage[index] = resume;
             System.out.println("\nThe resume with \"" + resume.getUuid() + "\" has been updated.");
         } else {
             System.out.println("\nThe resume with \"" + resume.getUuid() + "\" does not exist in the database.");
