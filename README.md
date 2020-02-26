@@ -1,15 +1,13 @@
-## Разработка Web приложения "База данных резюме"
-  -  используем: Java 8, IntelliJ IDEA, GitHib/Git, Сервлеты, JSP, JSTL, Tomcat, JUnit, PostgreSQL, GSON, JAXB
-  - хранение резюме
-     -  в памяти на основе массива, отсортированного массива, списка и ассоциированного массива (Map)
-     -  в файловой системе (File API и <a href="http://www.quizful.net/post/java-nio-tutorial">Java 7 NIO File API</a>)
-        - в стандартной и кастомной сериализации Java
-        - в формате JSON (<a href="https://github.com/google/gson">Google Gson</a>)
-        - в формате XML (<a href="https://ru.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">JAXB</a>)
-     -  в реляционной базе <a href="https://ru.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a>
-  -  деплой веб приложения
-     - в контейнер сервлетов <a href="http://tomcat.apache.org/">Tomcat</a>
-     - в облачный сервис <a href="https://www.heroku.com/">Heroku</a>
+## Web Application "Resume Database"
 
-Приложение будет разрабатываться на:
-**объектная модель, коллекции, система ввода-вывода, работа с файлами, сериализация, работа с XML, JSON, SQL, персистентность в базу данных (PostgreSQL), сервлеты, HTML/JSP/JSTL, веб-контейнер Tomcat, модульные тесты JUnit, java.util.Logging, система контроля версий Git.**
+  - technologies: Java 8, IntelliJ IDEA, GitHib/Git, Servlets, HTML/JSP/JSTL, Tomcat, JUnit, PostgreSQL/SQL, XML, GSON, JAXB 
+  - resume storage:
+     -  in memory based on an array, sorted array, list, and associated array (Map)
+     -  in the file system (File API and Java 7 NIO File API)
+        - in standard and custom Java serialization
+        - in JSON format (Google Gson)
+        - in XML format (JAXB)
+     -  in a PostgreSQL relational database
+  -  web application deployment
+     - to the Tomcat servlet container
+     - to Heroku cloud service
